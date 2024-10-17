@@ -1,0 +1,261 @@
+/* Stile generale */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile dell'header */
+header {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+    z-index: 1;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Effetti hover sui pulsanti */
+.btn {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Sezione "Chi Sono" */
+#about {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 80px;
+}
+
+#about img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+    width: 900px; /* Imposta la larghezza desiderata */
+    height: 300px; /* Imposta l'altezza per mantenere la forma rotonda */
+    object-fit: cover; /* Ritaglia l'immagine per riempire il contenitore */
+    border: 5px solid white; /* Aggiunge un bordo bianco per un effetto migliore */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra per profondità */
+    transition: transform 0.3s; /* Effetto di transizione al passaggio del mouse */
+}
+
+.profile-img:hover {
+    transform: scale(1.1); /* Ingrandisce l'immagine al passaggio del mouse */
+}
+
+
+/* Sezione Competenze */
+#skills {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.progress {
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+    background: linear-gradient(45deg, #007bff, #00c3ff);
+    transition: width 0.4s ease-in-out;
+}
+
+/* Stile delle card */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    transform: scale(1.05);
+}
+
+.card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Stile del footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #00c3ff;
+}
+
+/* Animazione del testo */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Applicazione dell'animazione */
+header h1, header p {
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Media queries per la reattività */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+    header p {
+        font-size: 18px;
+    }
+    #about {
+        padding: 40px 0;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+}
+
+/* Stile della sezione */
+#skills {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+/* Contenitore delle immagini in rotazione */
+.circle-container {
+    position: relative;
+    width: 600px;  /* Dimensione totale del contenitore */
+    height: 600px; /* Dimensione totale del contenitore */
+    margin: 0 auto;
+}
+
+/* Stile dell'immagine centrale */
+.central-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.central-image img {
+    width: 200px;  /* Dimensione dell'immagine centrale */
+    height: 200px; /* Dimensione dell'immagine centrale */
+    border-radius: 20%;
+    border: 2px solid #007bff;
+}
+
+/* Contenitore delle immagini orbitanti */
+.orbit-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;  /* Larghezza del contenitore orbitante */
+    height: 100%; /* Altezza del contenitore orbitante */
+    transform: translate(-50%, -50%);
+}
+
+/* Stile delle immagini orbitanti */
+.orbit-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 150px; /* Dimensione delle immagini orbitanti */
+    height: 150px; /* Dimensione delle immagini orbitanti */
+    margin: -75px; /* Per centrare le immagini */
+    cursor: pointer; /* Cambia il cursore per indicare che è cliccabile */
+}
+
+.orbit-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+    border: 3px solid #00c3ff;
+}
+
+/* Posizionamento delle immagini orbitanti lungo il cerchio */
+.orbit-image:nth-child(1) { transform: rotate(0deg) translate(200px) rotate(0deg); }
+.orbit-image:nth-child(2) { transform: rotate(45deg) translate(200px) rotate(-45deg); }
+.orbit-image:nth-child(3) { transform: rotate(90deg) translate(200px) rotate(-90deg); }
+.orbit-image:nth-child(4) { transform: rotate(135deg) translate(200px) rotate(-135deg); }
+.orbit-image:nth-child(5) { transform: rotate(180deg) translate(200px) rotate(-180deg); }
+.orbit-image:nth-child(6) { transform: rotate(225deg) translate(200px) rotate(-225deg); }
+.orbit-image:nth-child(7) { transform: rotate(270deg) translate(200px) rotate(-270deg); }
+.orbit-image:nth-child(8) { transform: rotate(315deg) translate(200px) rotate(-315deg); }
+
+/* Animazione di rotazione */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Stile per il contenitore a schermo intero */
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Sfondo traslucido */
+    display: none; /* Inizialmente nascosto */
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Posiziona sopra tutto */
+}
+
+.fullscreen-container img {
+    max-width: 90%; /* Limita la larghezza massima */
+    max-height: 90%; /* Limita l'altezza massima */
+}
+
+
