@@ -43,6 +43,20 @@ header p {
 .btn:hover {
     background: #0056b3;
     transform: translateY(-3px);
+    color: #ffffff; /* Colore del testo bianco durante hover */
+}
+
+a.btn-whatsapp {
+    background-color: #007bff; /* Colore di sfondo blu chiaro */
+    color: #fff; /* Colore del testo bianco */
+    border: 2px solid #ffffff; /* Bordo bianco */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transizione morbida per il colore */
+}
+
+a.btn-whatsapp:hover {
+    background-color: #25D366; /* Colore verde di WhatsApp durante hover */
+    color: #ffffff; /* Colore del testo bianco durante hover */
+    border: 2px solid #25D366; /* Bordo verde durante hover */
 }
 
 /* Sezione "Chi Sono" */
