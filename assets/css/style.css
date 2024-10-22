@@ -164,3 +164,15 @@ header h1, header p {
         padding: 8px 16px;
     }
 }
+
+.section {
+    opacity: 0;
+    transform: translateY(100px);  /* Le sezioni iniziano 100px più in basso */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animazione */
+}
+
+/* Stile che verrà applicato quando la sezione entra nel viewport */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);  /* Le sezioni tornano nella loro posizione originale */
+}
