@@ -181,7 +181,7 @@ header h1, header p {
 
 .section {
     opacity: 0;
-    transform: translateY(100px);  /* Le sezioni iniziano 100px più in basso */
+    transform: translateY(400px);  /* Le sezioni iniziano 100px più in basso */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animazione */
 }
 
